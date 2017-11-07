@@ -63,7 +63,7 @@
     </WrapPanel>-->
 
     <!-- ScrollViewer -->
-    <ScrollViewer VerticalScrollBarVisibility="Auto"
+    <!--<ScrollViewer VerticalScrollBarVisibility="Auto"
                   HorizontalScrollBarVisibility="Disabled">
         <StackPanel>
             <Button Content="Click Me" />
@@ -93,5 +93,12 @@
             <Button Content="Click Me" />
 
         </StackPanel>
-    </ScrollViewer>
+    </ScrollViewer>-->
+    
+    <!-- ViewBox -->
+    <Viewbox HorizontalAlignment="Center" VerticalAlignment="Center"
+             Width="150" Height="150" 
+             Stretch="Uniform">
+        <Button Height="20" Width="50" Content="Click me" />
+    </Viewbox>
 </Window>
