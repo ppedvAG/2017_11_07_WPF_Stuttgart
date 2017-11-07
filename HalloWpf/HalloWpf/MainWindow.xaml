@@ -42,5 +42,23 @@
         <Button Content="Click Me" />
 
     </StackPanel>-->
-    
+
+    <!-- Wrappanel -->
+    <WrapPanel>
+
+        <Button Content="Click Me" />
+        <Button Content="Click Me" />
+        <Button Content="Click Me" />
+        <Button Content="Click Me" />
+        <Button Content="Click Me" />
+        <Button Content="Click Me" />
+        <Button Content="Click Me" />
+        <Button Content="Click Me" />
+        <Button Content="Click Me" />
+        <Button Content="Click Me" />
+        <Button Content="Click Me" />
+        <Button Content="Click Me" />
+        <Button Content="Click Me" />
+
+    </WrapPanel>
 </Window>
