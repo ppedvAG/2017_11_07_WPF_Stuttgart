@@ -21,7 +21,7 @@
                  Fill="Green" Height="80" Width="80" />
 
     </Canvas>-->
-    
+
     <!-- Stackpanel -->
     <!--<StackPanel Orientation="Vertical" 
                 Background="Red"
@@ -44,7 +44,7 @@
     </StackPanel>-->
 
     <!-- Wrappanel -->
-    <WrapPanel>
+    <!--<WrapPanel>
 
         <Button Content="Click Me" />
         <Button Content="Click Me" />
@@ -60,5 +60,38 @@
         <Button Content="Click Me" />
         <Button Content="Click Me" />
 
-    </WrapPanel>
+    </WrapPanel>-->
+
+    <!-- ScrollViewer -->
+    <ScrollViewer VerticalScrollBarVisibility="Auto"
+                  HorizontalScrollBarVisibility="Disabled">
+        <StackPanel>
+            <Button Content="Click Me" />
+            <Button Content="Click Me" />
+            <Button Content="Click Me" />
+            <Button Content="Click Me" />
+            <Button Content="Click Me" />
+            <Button Content="Click Me" />
+            <Button Content="Click Me" />
+            <Button Content="Click Me" />
+            <Button Content="Click Me" />
+            <Button Content="Click Me" />
+            <Button Content="Click Me" />
+            <Button Content="Click Me" />
+            <Button Content="Click Me" />
+            <Button Content="Click Me" />
+            <Button Content="Click Me" />
+            <Button Content="Click Me" />
+            <Button Content="Click Me" />
+            <Button Content="Click Me" />
+            <Button Content="Click Me" />
+            <Button Content="Click Me" />
+            <Button Content="Click Me" />
+            <Button Content="Click Me" />
+            <Button Content="Click Me" />
+            <Button Content="Click Me" />
+            <Button Content="Click Me" />
+
+        </StackPanel>
+    </ScrollViewer>
 </Window>
