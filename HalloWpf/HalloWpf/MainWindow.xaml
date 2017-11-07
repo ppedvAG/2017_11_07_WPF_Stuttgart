@@ -118,7 +118,7 @@
     </DockPanel>-->
     
     <!-- Border -->
-    <Border BorderThickness="3" BorderBrush="DeepPink"
+    <!--<Border BorderThickness="3" BorderBrush="DeepPink"
             CornerRadius="5" 
             Margin="50">
         <StackPanel Margin="5"
@@ -128,5 +128,40 @@
             <Button Content="Click me!" />
             <Button Content="Click me!" Margin="4 0 0 0" />
         </StackPanel>
-    </Border>
+    </Border>-->
+    
+    <!-- Grid -->
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100" />
+            <ColumnDefinition MinWidth="100" Width="*" />
+            <ColumnDefinition MinWidth="100" Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        
+        <Rectangle Grid.Column="0"
+                   Grid.Row="0"
+                   Fill="Blue" />
+
+        <Rectangle Grid.Column="1"
+                   Grid.Row="0"
+                   Fill="Green" />
+
+        <Rectangle Grid.Column="2"
+                   Grid.Row="0"
+                   Fill="Pink" />
+
+        <Button Content="Die Mitte"
+                Grid.Column="1"
+                Grid.Row="1" />
+
+        <Rectangle Grid.ColumnSpan="3"
+                   Grid.Row="2"
+                   Fill="Black" />
+    </Grid>
 </Window>
