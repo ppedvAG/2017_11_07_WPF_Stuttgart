@@ -94,14 +94,14 @@
 
         </StackPanel>
     </ScrollViewer>-->
-    
+
     <!-- ViewBox -->
     <!--<Viewbox HorizontalAlignment="Center" VerticalAlignment="Center"
              Width="150" Height="150" 
              Stretch="Uniform">
         <Button Height="20" Width="50" Content="Click me" />
     </Viewbox>-->
-    
+
     <!-- Dockpanel -->
     <!--<DockPanel LastChildFill="True">
 
@@ -116,7 +116,7 @@
 
         <Button Content="Last Child Fill" />
     </DockPanel>-->
-    
+
     <!-- Border -->
     <!--<Border BorderThickness="3" BorderBrush="DeepPink"
             CornerRadius="5" 
@@ -129,7 +129,7 @@
             <Button Content="Click me!" Margin="4 0 0 0" />
         </StackPanel>
     </Border>-->
-    
+
     <!-- Grid -->
     <!--<Grid>
         <Grid.ColumnDefinitions>
@@ -164,11 +164,11 @@
                    Grid.Row="2"
                    Fill="Black" />
     </Grid>-->
-    
+
     <!-- Controls -->
 
-    <Grid>
-        <Grid.Background>
+    <StackPanel Margin="50">
+        <!--<Grid.Background>
             <ImageBrush ImageSource="sample1_l.jpg"
                         Stretch="UniformToFill" />
         </Grid.Background>
@@ -176,7 +176,33 @@
         <Image Margin="50" 
                Opacity="0.5"
                Source="sample1_l.jpg"
-               Stretch="UniformToFill"/>
+               Stretch="UniformToFill"/>-->
 
-    </Grid>
+        <Menu>
+            <MenuItem Header="Datei">
+                <MenuItem Header="Speichern" />
+                <Separator />
+                <MenuItem Header="Schließen" />
+            </MenuItem>
+        </Menu>
+        
+        <Slider Minimum="0" Maximum="100"
+                TickFrequency="20"
+                TickPlacement="BottomRight"
+                Orientation="Vertical"
+                IsSnapToTickEnabled="True"
+                Foreground="Black"
+                Height="200"/>
+
+        <ProgressBar IsIndeterminate="True" Height="20" >
+            <ProgressBar.Foreground>
+                <LinearGradientBrush>
+                    <GradientStop Offset="0" Color="Red" />
+                    <GradientStop Offset="1" Color="Yellow" />
+                </LinearGradientBrush>
+            </ProgressBar.Foreground>
+        </ProgressBar>
+
+    </StackPanel>
+
 </Window>
