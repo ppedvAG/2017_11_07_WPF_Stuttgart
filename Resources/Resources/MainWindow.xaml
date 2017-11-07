@@ -1,0 +1,52 @@
+﻿<Window x:Class="Resources.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:system="clr-namespace:System;assembly=mscorlib"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Window.Resources>
+        <system:Double x:Key="defaultButtonHeight">50</system:Double>
+        <Image x:Key="myImage" Source="http://imgsv.imaging.nikon.com/lineup/lens/zoom/normalzoom/af-s_dx_18-140mmf_35-56g_ed_vr/img/sample/sample1_l.jpg" />
+        <SolidColorBrush x:Key="defaultBackgroundBrush" Color="#FFB788F5" />
+    </Window.Resources>
+
+    <StackPanel Margin="20">
+
+        <Button Background="{StaticResource defaultBackgroundBrush}"
+                Height="{StaticResource defaultButtonHeight}"
+                Click="changeColor"
+                Content="Change Color"/>
+
+        <Button Background="{StaticResource defaultBackgroundBrush}"
+                Click="changeBrush" Margin="0 4 0 0"
+                Content="Change Brush"/>
+
+        <Button Background="{DynamicResource defaultBackgroundBrush}"
+                Click="changeBrush" Margin="0 4 0 0"
+                Content="Change Brush"/>
+
+        <Button Background="{DynamicResource defaultBackgroundBrush}"
+                Click="changeBrushType" Margin="0 4 0 0"
+                Content="Change Brush Type"/>
+
+        <StackPanel Margin="0 20 0 0">
+            <StackPanel.Resources>
+                <SolidColorBrush x:Key="defaultBackgroundBrush" Color="Red" />
+            </StackPanel.Resources>
+
+            <Rectangle Height="30"
+                       Fill="{StaticResource defaultBackgroundBrush}" />
+
+            <Rectangle Fill="{StaticResource defaultForegroundBrush}"
+                       Height="20" />
+
+            <Rectangle Fill="{StaticResource specialBackgroundColor}"
+                       Height="20" />
+
+            <ContentControl Content="{StaticResource myImage}" />
+
+        </StackPanel>
+    </StackPanel>
+</Window>
