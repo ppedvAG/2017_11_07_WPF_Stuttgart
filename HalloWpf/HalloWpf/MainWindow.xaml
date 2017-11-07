@@ -96,9 +96,37 @@
     </ScrollViewer>-->
     
     <!-- ViewBox -->
-    <Viewbox HorizontalAlignment="Center" VerticalAlignment="Center"
+    <!--<Viewbox HorizontalAlignment="Center" VerticalAlignment="Center"
              Width="150" Height="150" 
              Stretch="Uniform">
         <Button Height="20" Width="50" Content="Click me" />
-    </Viewbox>
+    </Viewbox>-->
+    
+    <!-- Dockpanel -->
+    <!--<DockPanel LastChildFill="True">
+
+        <Button DockPanel.Dock="Left" Content="Left" />
+
+        <Button DockPanel.Dock="Top" Content="Top" />
+        <Button DockPanel.Dock="Top" Content="Top" />
+
+        <Button DockPanel.Dock="Bottom" Content="Bottom" />
+
+        <Button DockPanel.Dock="Right" Content="Right" />
+
+        <Button Content="Last Child Fill" />
+    </DockPanel>-->
+    
+    <!-- Border -->
+    <Border BorderThickness="3" BorderBrush="DeepPink"
+            CornerRadius="5" 
+            Margin="50">
+        <StackPanel Margin="5"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Orientation="Horizontal">
+            <Button Content="Click me!" />
+            <Button Content="Click me!" Margin="4 0 0 0" />
+        </StackPanel>
+    </Border>
 </Window>
