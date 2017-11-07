@@ -22,5 +22,25 @@
 
     </Canvas>-->
     
+    <!-- Stackpanel -->
+    <!--<StackPanel Orientation="Vertical" 
+                Background="Red"
+                Margin="20">
+
+        <Button Content="Click Me" />
+        <Button Content="Click Me" />
+        <Button Content="Click Me" />
+        <Button Content="Click Me" />
+        <Button Content="Click Me" />
+        <Button Content="Click Me" />
+        <Button Content="Click Me" />
+        <Button Content="Click Me" />
+        <Button Content="Click Me" />
+        <Button Content="Click Me" />
+        <Button Content="Click Me" />
+        <Button Content="Click Me" />
+        <Button Content="Click Me" />
+
+    </StackPanel>-->
     
 </Window>
