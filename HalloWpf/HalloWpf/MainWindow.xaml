@@ -131,7 +131,7 @@
     </Border>-->
     
     <!-- Grid -->
-    <Grid>
+    <!--<Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="100" />
             <ColumnDefinition MinWidth="100" Width="*" />
@@ -163,5 +163,20 @@
         <Rectangle Grid.ColumnSpan="3"
                    Grid.Row="2"
                    Fill="Black" />
+    </Grid>-->
+    
+    <!-- Controls -->
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="sample1_l.jpg"
+                        Stretch="UniformToFill" />
+        </Grid.Background>
+       
+        <Image Margin="50" 
+               Opacity="0.5"
+               Source="sample1_l.jpg"
+               Stretch="UniformToFill"/>
+
     </Grid>
 </Window>
