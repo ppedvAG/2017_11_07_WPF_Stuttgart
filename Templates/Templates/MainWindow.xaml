@@ -12,7 +12,7 @@
         <ControlTemplate x:Key="myButtonTemplate" TargetType="Button">
             <Grid>
                 <Ellipse Fill="{TemplateBinding Background}"
-                         HorizontalAlignment="Stretch"
+                         HorizontalAlignment="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=HorizontalAlignment}"
                          VerticalAlignment="Stretch"/>
 
                 <ContentPresenter Content="{TemplateBinding Content}"
