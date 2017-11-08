@@ -1,0 +1,33 @@
+﻿<Window x:Class="RelativeSourceSelf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RelativeSourceSelf"
+        mc:Ignorable="d"
+        Name="window"
+        Title="MainWindow" Height="350" Width="525">
+    <StackPanel Margin="50">
+
+        <TextBox Name="colorTextBox"
+                 HorizontalContentAlignment="Center"
+                 FontSize="36"
+                 Foreground="{Binding RelativeSource={RelativeSource Self}, Path=Text}" />
+
+        <Slider Margin="0 20 0 0" Maximum="{Binding ElementName=window, Path=ActualWidth}" 
+                Value="{Binding ElementName=colorRectangle, Path=Width}" />
+
+        <Rectangle Height="150"
+                   Width="{Binding RelativeSource={RelativeSource Self}, Path=Height, Mode=TwoWay}"
+                   Name="colorRectangle"
+                   Fill="{Binding ElementName=colorTextBox, Path=Foreground}"/>
+
+    </StackPanel>
+</Window>
+
+    <!--
+    
+    var b = new Binding();
+    b.RelativeSource = new RelativeSource();
+    
+    -->
