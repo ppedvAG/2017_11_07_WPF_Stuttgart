@@ -1,0 +1,22 @@
+﻿<Window x:Class="DependencyProperties.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DependencyProperties"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <StackPanel Margin="20">
+
+        <Slider Minimum="0" Maximum="100" Name="fontSizeSlider" />
+
+        <local:SimpleLabel Margin="0 20 0 0"
+                           FontSize="{Binding ElementName=fontSizeSlider, Path=Value}"
+                           Text="First Dependency Property">
+            <local:SimpleLabel.Foreground>
+                <ImageBrush ImageSource="https://c1.staticflickr.com/3/2926/14473062849_290057e314_z.jpg" />
+            </local:SimpleLabel.Foreground>
+        </local:SimpleLabel>
+
+    </StackPanel>
+</Window>
