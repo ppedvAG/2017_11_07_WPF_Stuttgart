@@ -1,0 +1,53 @@
+﻿<Window x:Class="EventTriggerToFrameworkElement.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <StackPanel Margin="20">
+        <StackPanel.Resources>
+            <Style TargetType="Button">
+                <Setter Property="Margin" Value="4" />
+                <Setter Property="Height" Value="40" />
+                <Setter Property="Width" Value="40" />
+                <Setter Property="Background" Value="Transparent" />
+            </Style>
+            <Style TargetType="Image">
+                <Setter Property="Width" Value="200" />
+                <Setter Property="HorizontalAlignment" Value="Center" />
+            </Style>
+        </StackPanel.Resources>
+
+        <StackPanel.Triggers>
+            <EventTrigger RoutedEvent="Button.Click" SourceName="plusButton">
+                <BeginStoryboard>
+                    <Storyboard>
+                        <DoubleAnimation Storyboard.TargetName="myImage"
+                                         Storyboard.TargetProperty="Width"
+                                         To="300" Duration="0:0:0.3" />
+                    </Storyboard>
+                </BeginStoryboard>
+            </EventTrigger>
+
+            <EventTrigger RoutedEvent="Button.Click" SourceName="minusButton">
+                <BeginStoryboard>
+                    <Storyboard>
+                        <DoubleAnimation Storyboard.TargetName="myImage"
+                                         Storyboard.TargetProperty="Width"
+                                         To="100" Duration="0:0:0.3" />
+                    </Storyboard>
+                </BeginStoryboard>
+            </EventTrigger>
+        </StackPanel.Triggers>
+
+        <StackPanel HorizontalAlignment="Center"
+                    Orientation="Horizontal">
+            <Button Name="plusButton" Content="+" />
+            <Button Name="minusButton" Content="-" />
+        </StackPanel>
+
+        <Image Name="myImage" Source="https://www.blog.google/static/blog/images/google-200x200.7714256da16f.png" />
+
+    </StackPanel>
+</Window>
