@@ -1,0 +1,47 @@
+﻿<Window x:Class="EventTriggers.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EventTriggers"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+
+    <Window.Resources>
+        <Style TargetType="Image">
+            <Setter Property="Width" Value="150" />
+            <Setter Property="Margin" Value="2" />
+
+            <Style.Triggers>
+                <EventTrigger RoutedEvent="MouseEnter">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetProperty="Width"
+                                             To="300" 
+                                             Duration="0:0:0.3" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+
+                <EventTrigger RoutedEvent="MouseLeave">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetProperty="Width"
+                                             To="150" 
+                                             Duration="0:0:0.3" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    
+    <StackPanel Orientation="Horizontal"
+                Margin="20">
+
+        <Image Source="https://www.blog.google/static/blog/images/google-200x200.7714256da16f.png" />
+        <Image Source="https://www.blog.google/static/blog/images/google-200x200.7714256da16f.png" />
+        <Image Source="https://www.blog.google/static/blog/images/google-200x200.7714256da16f.png" />
+
+    </StackPanel>
+</Window>
