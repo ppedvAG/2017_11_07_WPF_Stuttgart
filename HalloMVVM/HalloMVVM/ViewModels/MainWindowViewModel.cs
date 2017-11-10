@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace HalloMVVM.ViewModels
+﻿namespace HalloMVVM.ViewModels
 {
     internal class MainWindowViewModel : ViewModelBase
     {
