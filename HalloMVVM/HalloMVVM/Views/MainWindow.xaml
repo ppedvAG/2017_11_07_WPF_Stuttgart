@@ -1,0 +1,42 @@
+﻿<Window x:Class="HalloMVVM.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="clr-namespace:HalloMVVM.ViewModels"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    
+    <!--d:DataContext="{d:DesignInstance vm:MainWindowViewModel, IsDesignTimeCreatable=False}">-->
+
+    <Window.DataContext>
+        <vm:MainWindowViewModel />
+    </Window.DataContext>
+    
+    <StackPanel Margin="20">
+        <StackPanel.InputBindings>
+            <KeyBinding Key="C" Modifiers="Ctrl+Alt+Shift"
+                        Command="{Binding ChangeTextCommand}" />
+        </StackPanel.InputBindings>
+
+        <Menu>
+            <MenuItem Header="Datei">
+                <MenuItem Header="Change Text"
+                          Command="{Binding ChangeTextCommand}" />
+            </MenuItem>
+        </Menu>
+        
+        <TextBlock HorizontalAlignment="Center" 
+                   FontSize="28" Foreground="DarkBlue" FontFamily="Segoe UI Semilight"
+                   Text="{Binding WelcomeText}" />
+
+        <TextBox Margin="0 20 0 0"
+                 Text="{Binding WelcomeText, UpdateSourceTrigger=PropertyChanged}"
+                 HorizontalContentAlignment="Center" />
+
+        <Button Content="Change Text"
+                Margin="0 20 0 0"
+                Command="{Binding ChangeTextCommand}" />
+
+    </StackPanel>
+</Window>
