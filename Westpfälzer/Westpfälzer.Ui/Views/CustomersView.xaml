@@ -3,10 +3,64 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300"
              DataContext="{Binding Source={StaticResource Locator}, Path=CustomersViewModel}">
-    <Grid Background="Orange">
-            
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding LoadCustomersCommand}" />
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <TextBlock Text="{Binding CountCustomers}" />
+
+        <ListView Grid.Row="1"
+                  ItemsSource="{Binding Customers}"
+                  Grid.IsSharedSizeScope="True"
+                  VirtualizingStackPanel.IsVirtualizing="True"
+                  VirtualizingStackPanel.VirtualizationMode="Recycling">
+            <ListView.ItemTemplate>
+                <DataTemplate DataType="{x:Type models:Customer}"
+                              xmlns:models="clr-namespace:Westpfälzer.Core.Models;assembly=Westpfälzer.Core">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" SharedSizeGroup="CustomerId" />
+                            <ColumnDefinition Width="1" />
+                            <ColumnDefinition Width="Auto" SharedSizeGroup="CustomerFirstname" />
+                            <ColumnDefinition Width="1" />
+                            <ColumnDefinition Width="Auto" SharedSizeGroup="CustomerLastname" />
+                            <ColumnDefinition Width="1" />
+                            <ColumnDefinition Width="Auto" SharedSizeGroup="CustomerEmail" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.Resources>
+                            <Style TargetType="TextBlock">
+                                <Setter Property="Margin" Value="8 0 4 0" />
+                            </Style>
+                            <Style TargetType="GridSplitter">
+                                <Setter Property="HorizontalAlignment" Value="Stretch" />
+                                <Setter Property="Background" Value="DarkBlue" />
+                            </Style>
+                        </Grid.Resources>
+
+                        <TextBlock Grid.Column="0" Text="{Binding Id}" HorizontalAlignment="Right" />
+                        <GridSplitter Grid.Column="1" />
+
+                        <TextBlock Grid.Column="2" Text="{Binding Firstname}" />
+                        <GridSplitter Grid.Column="3" />
+
+                        <TextBlock Grid.Column="4" Text="{Binding Lastname}" />
+                        <GridSplitter Grid.Column="5" />
+
+                        <TextBlock Grid.Column="6" Text="{Binding Email}" />
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </Grid>
 </UserControl>
