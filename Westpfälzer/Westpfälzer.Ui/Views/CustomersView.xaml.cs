@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Westpfälzer.Ui
+namespace Westpfälzer.Ui.Views
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for CustomersView.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class CustomersView : UserControl
     {
-        public MainWindow()
+        public CustomersView()
         {
             InitializeComponent();
         }
