@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Westpfälzer.Core", "Westpf
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Westpfälzer.Data", "Westpfälzer.Data\Westpfälzer.Data.csproj", "{8A60B9E8-992C-4B61-A356-40406CB696E8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Westpfälzer.Ui", "Westpfälzer.Ui\Westpfälzer.Ui.csproj", "{B8602746-4F41-4485-ADB7-2DFF8B7B3E43}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{8A60B9E8-992C-4B61-A356-40406CB696E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8A60B9E8-992C-4B61-A356-40406CB696E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8A60B9E8-992C-4B61-A356-40406CB696E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8602746-4F41-4485-ADB7-2DFF8B7B3E43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8602746-4F41-4485-ADB7-2DFF8B7B3E43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8602746-4F41-4485-ADB7-2DFF8B7B3E43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8602746-4F41-4485-ADB7-2DFF8B7B3E43}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
